@@ -1,20 +1,20 @@
-# Experiment 8: Functional Verification of Asynchronous FIFO
+# EXPERIMENT 8 : FUNCTIONAL VERIFICATION OF ASYNCHRONOUS FIFO  
 
 ---
 
-## Aim  
+## AIM:  
 To perform **functional verification** of an **Asynchronous FIFO (First-In-First-Out)** design using **SystemVerilog**, ensuring reliable data transfer between two clock domains.
 
 ---
 
-## Apparatus Required  
+## APPARATUS REQUIRED:  
 - Computer with **Windows OS**  
 - **ModelSim 2020.1** (or later) or **EDA Playground**  
 - **SystemVerilog source code editor**
 
 ---
 
-## Description  
+## DESCRIPTION: 
 An **Asynchronous FIFO** allows data to be safely transferred between two independent clock domains — typically used in systems where producer and consumer operate at different clock frequencies.  
 
 Functional verification ensures that:
@@ -26,7 +26,7 @@ This experiment verifies FIFO behavior through **random stimulus generation** an
 
 ---
 
-## Features  
+## FEATURES:
 - Asynchronous FIFO design with independent read/write clocks  
 - Verification using **SystemVerilog testbench**  
 - Includes **randomized data generation**  
@@ -34,7 +34,7 @@ This experiment verifies FIFO behavior through **random stimulus generation** an
 
 ---
 
-## Procedure  
+## PROCEDURE: 
 
 1. **Open EDA Playground or ModelSim**  
    - Create a new SystemVerilog project named `Async_FIFO_Verification`.
@@ -58,9 +58,9 @@ This experiment verifies FIFO behavior through **random stimulus generation** an
 
 ---
 
-## SystemVerilog Code
+## SYSTEMVERILOG CODE:
 
-### Asynchronous FIFO Design (`async_fifo.sv`)
+### ASYNCHRONOUS FIFO DESIGN  (`async_fifo.sv`)
 ```systemverilog
 module async_fifo #(
     parameter DATA_WIDTH = 8,
@@ -107,7 +107,7 @@ module async_fifo #(
 
 endmodule
 ```
-### Testbench
+### TESTBENCH:
 ```systemverilog
 module fifo_tb;
     parameter DATA_WIDTH = 8;
@@ -187,10 +187,12 @@ module fifo_tb;
     end
 endmodule
 ```
-### Simulation Output
+## SIMULATION OUTPUT:
 
---- Paste the output here
+<img width="1920" height="1080" alt="Screenshot 2025-11-10 204800" src="https://github.com/user-attachments/assets/a062a17c-3f64-4884-9a78-b46ecd3183e9" />
 
-### Result
+<img width="1920" height="1080" alt="Screenshot 2025-11-10 204812" src="https://github.com/user-attachments/assets/437a1f87-e27a-4b15-8071-9daaa0c518e8" />
+
+## RESULTS:
 
 The Functional Verification of Asynchronous FIFO was successfully carried out using SystemVerilog.The FIFO was verified for correct data transfer across two asynchronous clock domains, ensuring proper write/read synchronization, flag operation, and data integrity.
